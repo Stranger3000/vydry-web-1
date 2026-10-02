@@ -1,0 +1,40 @@
+WEB SKAUTSKÉHO ODDÍLU VYDRY – NÁVOD
+====================================
+
+NAHRÁNÍ NA HOSTING
+1. Na hostingu zvol "Čistý webhosting".
+2. Připoj se přes FTP (např. FileZilla), údaje ti dá hosting.
+3. Nahraj CELÝ OBSAH této složky (index.html + složky img a fonts)
+   do kořenové složky webu (většinou www, public_html nebo htdocs).
+4. Hotovo – web se otevře na tvé doméně.
+
+FOTKY (doplníš sám)
+Web funguje i bez nich (místo fotky je modrá plocha / logo),
+ale s fotkami bude mnohem lepší. Stáhni pár fotek z Rajčete,
+zmenši je na cca 1600 px šířky (JPG) a pojmenuj přesně takto:
+
+  img/hero.jpg        – hlavní fotka nahoře (teď se načítá přímo
+                        z Rajčete; když ji uložíš sem, bude to jistější)
+  img/zakladna.jpg    – fotka klubovny v Uhelné
+  img/o-nas.jpg       – sekce O nás (na šířku)
+  img/tabor.jpg       – sekce Tábor (na šířku, Bludov)
+  img/galerie/1.jpg … img/galerie/6.jpg – galerie (čtverce)
+
+Podle grafického manuálu je dobré, aby na fotkách byly vidět
+šátky nebo kroje.
+
+ÚPRAVA TEXTŮ
+Vše je v souboru index.html – otevři v libovolném textovém
+editoru (např. VS Code, Notepad++) a přepiš texty mezi značkami.
+
+KALENDÁŘ OBSAZENOSTI ZÁKLADNY
+Kalendář je vložený přímo do webu. Aby ho návštěvníci viděli,
+musí být v Google Kalendáři veřejný:
+Nastavení kalendáře -> Přístupová oprávnění -> Zpřístupnit veřejně.
+Pokud nechceš ukazovat názvy akcí, zvol "Zobrazit pouze informace
+o volném čase / zaneprázdnění (skrýt podrobnosti)".
+
+PÍSMA
+Složka fonts obsahuje SKAUT Bold a TheMix. Licence dovoluje jejich
+použití na skautském webu, ale ne je nabízet ke stažení – složku
+proto nikam dál nesdílej.
