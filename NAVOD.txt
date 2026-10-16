@@ -8,24 +8,25 @@ NAHRÁNÍ NA HOSTING
    do kořenové složky webu (většinou www, public_html nebo htdocs).
 4. Hotovo – web se otevře na tvé doméně.
 
-FOTKY (doplníš sám)
-Web funguje i bez nich (místo fotky je modrá plocha / logo),
-ale s fotkami bude mnohem lepší. Stáhni pár fotek z Rajčete,
-zmenši je na cca 1600 px šířky (JPG) a pojmenuj přesně takto:
+FOTKY
+Galerie tábora 2026 obsahuje optimalizované fotky v souborech
+img/galerie/001.jpg až img/galerie/463.jpg. Prvních šest se zobrazuje
+hned, ostatní jsou pod tlačítkem „Další fotky“.
 
-  img/hero.jpg        – hlavní fotka nahoře (teď se načítá přímo
-                        z Rajčete; když ji uložíš sem, bude to jistější)
+  img/hero-tabor.jpg  – hlavní fotka nahoře
+  img/o-nas.jpg       – fotka v sekci O nás
+  img/oddily.jpg      – fotka v sekci Naše oddíly
   img/zakladna.jpg    – fotka klubovny v Uhelné
-  img/o-nas.jpg       – sekce O nás (na šířku)
+  img/stredocesky-kraj-logo.svg – logo Středočeského kraje v sekci Sponzorují nás
   img/tabor.jpg       – sekce Tábor (na šířku, Bludov)
-  img/galerie/1.jpg … img/galerie/6.jpg – galerie (čtverce)
 
 Podle grafického manuálu je dobré, aby na fotkách byly vidět
 šátky nebo kroje.
 
-ÚPRAVA TEXTŮ
-Vše je v souboru index.html – otevři v libovolném textovém
-editoru (např. VS Code, Notepad++) a přepiš texty mezi značkami.
+ÚPRAVA TEXTŮ A REZERVACE
+Obsah hlavní stránky je v index.html. Rezervační stránka je v
+rezervace.html; její formulář odesílá odpovědi do stávajícího
+Google dotazníku.
 
 KALENDÁŘ OBSAZENOSTI ZÁKLADNY
 Kalendář je vložený přímo do webu. Aby ho návštěvníci viděli,
