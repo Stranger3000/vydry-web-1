@@ -14,32 +14,41 @@
   body{margin:0;background:var(--papir);color:var(--text);font:17px/1.6 "TheMix","Open Sans",Calibri,Arial,sans-serif}
   a{color:var(--modra)}
   .top{background:var(--modra-tmava);padding:14px 20px}
-  .top-inner{max-width:900px;margin:auto}
+  .top-inner{max-width:1020px;margin:auto}
   .brand{color:var(--bila);font:700 1rem "SKAUT Bold","TheMix",sans-serif;text-decoration:none;letter-spacing:.05em;text-transform:uppercase}
-  main{max-width:900px;margin:0 auto;padding:54px 20px 80px}
-  .kicker{display:inline-block;margin-bottom:1em;padding:.3em .9em;border-radius:999px;background:var(--zluta);color:var(--modra-tmava);font:700 .8rem "SKAUT Bold","TheMix",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  main{max-width:1020px;margin:0 auto;padding:42px 20px 70px}
+  .kicker{display:inline-block;margin-bottom:0;padding:.45em 1em;border-radius:999px;background:var(--zluta);color:var(--modra-tmava);font:700 .8rem "SKAUT Bold","TheMix",sans-serif;letter-spacing:.08em;text-transform:uppercase}
   h1{margin:0 0 .5em;color:var(--modra-tmava);font:700 clamp(2rem,5vw,3rem)/1.15 "SKAUT Bold","TheMix",sans-serif;text-transform:uppercase}
-  .intro{max-width:42em;margin:0 0 2em;color:var(--text-jemny)}
-  .form-card{padding:clamp(22px,5vw,42px);border-radius:28px;background:var(--bila);box-shadow:0 4px 18px rgba(41,72,133,.1)}
-  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .intro{max-width:42em;margin:10px 0 24px;color:var(--text-jemny)}
+  .form-card{padding:clamp(20px,4vw,34px);border-radius:24px;background:var(--bila);box-shadow:0 4px 18px rgba(41,72,133,.1)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
   .field{min-width:0}
   .field-wide{grid-column:1/-1}
-  label,.legend{display:block;margin-bottom:7px;color:var(--modra-tmava);font-weight:700}
+  label,.legend{display:block;margin-bottom:6px;color:var(--modra-tmava);font-weight:700}
   .hint{display:block;margin-top:3px;color:var(--text-jemny);font-size:.9rem;font-weight:400}
-  input,textarea{width:100%;min-height:48px;padding:10px 12px;border:1px solid #bac7d8;border-radius:12px;background:#fff;color:var(--text);font:inherit}
-  textarea{min-height:110px;resize:vertical}
+  input,textarea{width:100%;min-height:46px;padding:9px 11px;border:1px solid #bac7d8;border-radius:10px;background:#fff;color:var(--text);font:inherit}
+  textarea{min-height:88px;resize:vertical}
   input:focus,textarea:focus{outline:3px solid rgba(57,121,181,.25);border-color:var(--modra)}
+  .people-input-row{display:flex;align-items:center;gap:14px}
+  .people-input-row input{flex:0 0 110px}
+  .people-note{margin:0;padding:8px 10px;border-radius:9px;background:#fff3dc;color:#795000;font-size:.98rem;font-weight:700;line-height:1.4}
   fieldset{grid-column:1/-1;margin:0;padding:0;border:0}
   .choices{display:grid;gap:10px}
   .choice{display:flex;align-items:flex-start;gap:10px;color:var(--text);font-weight:400}
   .choice input{width:20px;min-height:20px;height:20px;margin:3px 0 0;accent-color:var(--modra)}
   .other-input{margin-top:12px}
-  .required-note{margin:22px 0;color:var(--text-jemny);font-size:.9rem}
+  .required-note{margin:18px 0;color:var(--text-jemny);font-size:.9rem}
   .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-  button{min-height:50px;padding:10px 24px;border:0;border-radius:999px;background:var(--zluta);color:var(--modra-tmava);font:700 1rem "TheMix",sans-serif;cursor:pointer}
+  button{min-height:48px;padding:10px 22px;border:0;border-radius:999px;background:var(--zluta);color:var(--modra-tmava);font:700 1rem "TheMix",sans-serif;cursor:pointer}
   button:hover{box-shadow:0 5px 16px rgba(0,0,0,.15);transform:translateY(-1px)}
+  .calendar-card{margin:22px 0;padding:clamp(18px,3vw,28px);border-radius:24px;background:#fff;box-shadow:0 4px 18px rgba(41,72,133,.1)}
+  .calendar-card h2{margin:0 0 12px;color:var(--modra-tmava);line-height:1.2}
+  .calendar-card p{margin:0 0 14px}
+  .calendar-card iframe{display:block;width:100%;height:360px;border:0;border-radius:14px}
   footer{padding:24px 20px;background:var(--modra-tmava);color:rgba(255,255,255,.85);text-align:center;font-size:.9rem}
+  @media(max-width:760px){.calendar-card iframe{height:320px}}
   @media(max-width:650px){.form-grid{grid-template-columns:1fr}.field-wide,fieldset{grid-column:auto}.actions{align-items:stretch;flex-direction:column}.actions .back{align-self:flex-start}}
+  @media(max-width:420px){.people-input-row{align-items:stretch;flex-direction:column}.people-input-row input{flex-basis:auto}}
 </style>
 </head>
 <body>
@@ -50,6 +59,11 @@
   <span class="kicker">Přístav Dobré naděje</span>
   <h1>Rezervace základny</h1>
   <p class="intro">Vyplňte prosím údaje k pobytu. Po odeslání se rezervace uloží do našeho rezervačního dotazníku.</p>
+  <section class="calendar-card" aria-labelledby="occupancy-heading">
+    <h2 id="occupancy-heading">Kalendář obsazenosti základny</h2>
+    <p><a href="https://calendar.google.com/calendar/embed?src=c_e045d637b875ab9eca471078eed9e6266efd4bbf8e5c7f8cba7076b1785a4803%40group.calendar.google.com&amp;ctz=Europe%2FPrague&amp;hl=cs&amp;mode=MONTH" target="_blank" rel="noopener noreferrer">Otevřít kalendář na samostatné stránce</a></p>
+    <iframe title="Veřejný kalendář obsazenosti základny" loading="lazy" src="https://calendar.google.com/calendar/embed?src=c_e045d637b875ab9eca471078eed9e6266efd4bbf8e5c7f8cba7076b1785a4803%40group.calendar.google.com&amp;ctz=Europe%2FPrague&amp;hl=cs&amp;mode=MONTH&amp;wkst=2&amp;showTitle=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;bgcolor=%23ffffff&amp;color=%23255C9E"></iframe>
+  </section>
   <form class="form-card" action="https://docs.google.com/forms/d/e/1FAIpQLSfI1Ae7G54t0u9YkeEuHyFooFIkdJCA_OFL9NvB9_YEYi00Ug/formResponse" method="post">
     <input type="hidden" name="fvv" value="1">
     <input type="hidden" name="pageHistory" value="0">
@@ -73,8 +87,12 @@
         <input id="email" name="entry.310090522" type="email" autocomplete="email" required>
       </div>
       <div class="field">
-        <label for="arrival">Datum a čas příjezdu <span aria-hidden="true">*</span></label>
-        <input id="arrival" type="datetime-local" required>
+        <label for="arrival-date">Datum příjezdu <span aria-hidden="true">*</span></label>
+        <input id="arrival-date" type="date" required>
+      </div>
+      <div class="field">
+        <label for="arrival-time">Čas příjezdu <span aria-hidden="true">*</span></label>
+        <input id="arrival-time" type="time" required>
         <input id="arrival-year" type="hidden" name="entry.1075638719_year">
         <input id="arrival-month" type="hidden" name="entry.1075638719_month">
         <input id="arrival-day" type="hidden" name="entry.1075638719_day">
@@ -82,8 +100,12 @@
         <input id="arrival-minute" type="hidden" name="entry.1075638719_minute">
       </div>
       <div class="field">
-        <label for="departure">Datum a čas odjezdu <span aria-hidden="true">*</span></label>
-        <input id="departure" type="datetime-local" required>
+        <label for="departure-date">Datum odjezdu <span aria-hidden="true">*</span></label>
+        <input id="departure-date" type="date" required>
+      </div>
+      <div class="field">
+        <label for="departure-time">Čas odjezdu <span aria-hidden="true">*</span></label>
+        <input id="departure-time" type="time" required>
         <input id="departure-year" type="hidden" name="entry.1024978310_year">
         <input id="departure-month" type="hidden" name="entry.1024978310_month">
         <input id="departure-day" type="hidden" name="entry.1024978310_day">
@@ -91,23 +113,16 @@
         <input id="departure-minute" type="hidden" name="entry.1024978310_minute">
       </div>
       <div class="field">
-        <label for="people">Kolik vás bude? <span aria-hidden="true">*</span><span class="hint">Přibližný počet ubytovaných</span></label>
-        <input id="people" name="entry.25448212" type="number" min="1" step="1" required>
+        <label for="people">Počet osob <span aria-hidden="true">*</span></label>
+        <div class="people-input-row">
+          <input id="people" name="entry.25448212" type="number" min="1" max="30" step="1" required>
+          <p class="people-note">K dispozici je celkem 25 míst na spaní. Spí se na zemi.</p>
+        </div>
       </div>
       <div class="field field-wide">
-        <label for="requests">Máte nějaké další požadavky?<span class="hint">Například více nádobí nebo postele</span></label>
+        <label for="requests">Další požadavky<span class="hint">Například více nádobí nebo postele</span></label>
         <textarea id="requests" name="entry.887239390"></textarea>
       </div>
-      <fieldset>
-        <legend class="legend">Odkud jste se o nás dozvěděli?</legend>
-        <div class="choices">
-          <label class="choice"><input type="radio" name="entry.1505563020" value="Křižovatka"> Křižovatka</label>
-          <label class="choice"><input type="radio" name="entry.1505563020" value="jiné webové stránky"> Jiné webové stránky</label>
-          <label class="choice"><input type="radio" name="entry.1505563020" value="od někoho, kdo už zde byl ubytovaný"> Od někoho, kdo už zde byl ubytovaný</label>
-          <label class="choice"><input id="source-other-choice" type="radio" name="entry.1505563020" value="__other_option__"> Jinak</label>
-        </div>
-        <input class="other-input" id="source-other" name="entry.1505563020.other_option_response" type="text" aria-label="Jiný zdroj">
-      </fieldset>
     </div>
     <p class="required-note">* Povinné údaje. Odesláním se vaše odpovědi uloží do rezervačního formuláře.</p>
     <div class="actions">
@@ -119,29 +134,36 @@
 <footer>Junák – český skaut · Přístav Dobré naděje Kutná Hora</footer>
 <script>
   document.querySelector('form').addEventListener('submit', function(event){
-    var arrival = document.getElementById('arrival').value;
-    var departure = document.getElementById('departure').value;
-    function setDateParts(prefix, value){
-      var parts = value.split('T');
-      var date = parts[0].split('-');
-      var time = parts[1].split(':');
+    var arrivalDate = document.getElementById('arrival-date').value;
+    var arrivalTime = document.getElementById('arrival-time').value;
+    var departureDate = document.getElementById('departure-date').value;
+    var departureTime = document.getElementById('departure-time').value;
+    var arrival = arrivalDate + 'T' + arrivalTime;
+    var departure = departureDate + 'T' + departureTime;
+    function setDateParts(prefix, dateValue, timeValue){
+      var date = dateValue.split('-');
+      var time = timeValue.split(':');
       document.getElementById(prefix + '-year').value = date[0];
       document.getElementById(prefix + '-month').value = String(Number(date[1]));
       document.getElementById(prefix + '-day').value = String(Number(date[2]));
       document.getElementById(prefix + '-hour').value = String(Number(time[0]));
       document.getElementById(prefix + '-minute').value = String(Number(time[1]));
     }
-    setDateParts('arrival', arrival);
-    setDateParts('departure', departure);
+    setDateParts('arrival', arrivalDate, arrivalTime);
+    setDateParts('departure', departureDate, departureTime);
     if(new Date(departure) <= new Date(arrival)){
       event.preventDefault();
-      document.getElementById('departure').setCustomValidity('Odjezd musí být po příjezdu.');
-      document.getElementById('departure').reportValidity();
+      document.getElementById('departure-time').setCustomValidity('Odjezd musí být po příjezdu.');
+      document.getElementById('departure-time').reportValidity();
     }
   });
-  document.getElementById('departure').addEventListener('input', function(){this.setCustomValidity('');});
-  document.getElementById('source-other').addEventListener('input', function(){
-    if(this.value){document.getElementById('source-other-choice').checked = true;}
+  ['arrival-date','arrival-time','departure-date','departure-time'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      document.getElementById('departure-time').setCustomValidity('');
+    });
+  });
+  document.getElementById('people').addEventListener('input', function(){
+    if(this.value && Number(this.value) > 30){this.value = '30';}
   });
 </script>
 </body>
